@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
+
+import { TRPCReactProvider } from '@/trpc/react'
 
 export const metadata: Metadata = {
   title: 'Three example',
@@ -11,8 +14,10 @@ export default function ThreeLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex h-[calc(100vh-theme(spacing.16))] items-center justify-center py-10">
-      {children}
-    </div>
+    <TRPCReactProvider cookies={cookies().toString()}>
+      <div className="flex h-[calc(100vh-theme(spacing.16))] items-center justify-center py-10">
+        {children}
+      </div>
+    </TRPCReactProvider>
   )
 }

@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('prettier').Config & import('@trivago/prettier-plugin-sort-imports').PrettierConfig} */
+const config = {
     endOfLine: 'lf',
     semi: false,
     useTabs: false,
@@ -26,8 +27,7 @@ module.exports = {
     ],
     importOrderSeparation: false,
     importOrderSortSpecifiers: true,
-    importOrderBuiltinModulesToTop: true,
     importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-    importOrderMergeDuplicateImports: true,
-    importOrderCombineTypeAndValueImports: true
 }
+
+export default config;

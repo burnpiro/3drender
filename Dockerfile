@@ -26,7 +26,10 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . ./
 # disable nextjs telemetry
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV SKIP_ENV_VALIDATION 1
 
+# generate prisma client data
+RUN npm run db:generate
 # build prod app
 RUN npm run build
 
