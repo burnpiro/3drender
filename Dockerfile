@@ -51,7 +51,7 @@ USER nextjs
 EXPOSE 8080
 
 ENV PORT 8080
-ENV HOSTNAME localhost
+ENV HOSTNAME 0.0.0.0
 
 # Run the web service on container startup.
 CMD ["node", "server.js"]
