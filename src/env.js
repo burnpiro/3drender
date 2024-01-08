@@ -8,9 +8,9 @@ export const env = createEnv({
    */
   server: {
     DB_HOST: z.string(),
-    DB_PORT: z.string(),
     DB_USER: z.string(),
     DB_PASSWORD: z.string(),
+    DB_NAME: z.string(),
     SSL_CLIENT_IDENTITY_PASS: z.string(),
     SSL_CERT_PATH: z.string(),
     SSL_IDENTITY_PATH: z.string(),
@@ -62,9 +62,9 @@ export const env = createEnv({
    */
   runtimeEnv: {
     DB_HOST: process.env.DB_HOST,
-    DB_PORT: process.env.DB_PORT,
     DB_USER: process.env.DB_USER,
     DB_PASSWORD: process.env.DB_PASSWORD,
+    DB_NAME: process.env.DB_NAME,
     SSL_CLIENT_IDENTITY_PASS: process.env.SSL_CLIENT_IDENTITY_PASS,
     SSL_CERT_PATH: process.env.SSL_CERT_PATH,
     SSL_IDENTITY_PATH: process.env.SSL_IDENTITY_PATH,
