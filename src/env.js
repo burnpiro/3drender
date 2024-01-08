@@ -11,6 +11,7 @@ export const env = createEnv({
     DB_USER: z.string(),
     DB_PASSWORD: z.string(),
     DB_NAME: z.string(),
+    DB_SOCKET: z.string().optional(), //only for cloud run
     SSL_CLIENT_IDENTITY_PASS: z.string(),
     SSL_CERT_PATH: z.string(),
     SSL_IDENTITY_PATH: z.string(),
@@ -65,6 +66,7 @@ export const env = createEnv({
     DB_USER: process.env.DB_USER,
     DB_PASSWORD: process.env.DB_PASSWORD,
     DB_NAME: process.env.DB_NAME,
+    DB_SOCKET: process.env.DB_SOCKET,
     SSL_CLIENT_IDENTITY_PASS: process.env.SSL_CLIENT_IDENTITY_PASS,
     SSL_CERT_PATH: process.env.SSL_CERT_PATH,
     SSL_IDENTITY_PATH: process.env.SSL_IDENTITY_PATH,
