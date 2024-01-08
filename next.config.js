@@ -8,5 +8,7 @@ await import('./src/env.js');
 const config = {
     transpilePackages: ['three'],
     output: 'standalone',
+    removeConsole: false,
+    productionBrowserSourceMaps: true,
 }
 export default config;
